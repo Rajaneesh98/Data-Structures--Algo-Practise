@@ -1,42 +1,23 @@
 import java.sql.Array;
+import java.util.*;
 
 public class Rough {
 
-    static int num =1;
+    static List<Integer> arr  = new ArrayList<>();
 
-    public static int[] printNos(int x,int[] arr) {
-        // Write Your Code Here
-        if (num > x) {
-            return arr;
+    public static int simplePrint(int num, int count){
+        if(num<=0){
+            return count;
         }
-        arr[num - 1] = num;
-        num = num + 1;
-        printNos(x, arr);
-        return arr;
+        count = count + num;
+        System.out.println(count);
+        return  simplePrint(num-1,count);
     }
-
-    private static void basicPrint(int num,int x){
-        if(num>x){
-            return;
-        }
-        System.out.println(num);
-        basicPrint(++num,x);
-    }
-
 
     public static void main(String[] args) {
-//        int[] arr = printNos(5);
-//        for(int i : arr ){
-//            System.out.println(i);
-//        }
-
-//        basicPrint(1,5);
-        int num =5;
-        int[] arr = new int[num];
-        printNos(num,arr);
-        for(int i : arr){
-            System.out.println(i);
-        }
-
+        int a =3;
+        int[] num = new int[a];
+        int count =0;
+        System.out.println(simplePrint(a, count));
     }
 }
