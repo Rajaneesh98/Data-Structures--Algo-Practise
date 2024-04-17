@@ -3,6 +3,8 @@ import java.util.*;
 
 public class Rough {
 
+    static int[] num = new int[4];
+
     static List<Integer> arr  = new ArrayList<>();
 
     public static int simplePrint(int num, int count){
@@ -15,9 +17,6 @@ public class Rough {
     }
 
     public static void main(String[] args) {
-        int a =3;
-        int[] num = new int[a];
-        int count =0;
-        System.out.println(simplePrint(a, count));
+        for(int i : num) System.out.println(i);
     }
 }
